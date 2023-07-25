@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B28F09D2A70181A001FE481 /* Enumeration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B28F09C2A70181A001FE481 /* Enumeration.swift */; };
+		8B53D7362A70031F003C8E65 /* EmotionMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B53D7352A70031F003C8E65 /* EmotionMainViewController.swift */; };
+		8B53D7382A70135C003C8E65 /* StatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B53D7372A70135C003C8E65 /* StatisticViewController.swift */; };
 		8BA048F02A6FAE4E009C5724 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA048EF2A6FAE4E009C5724 /* AppDelegate.swift */; };
 		8BA048F22A6FAE4E009C5724 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA048F12A6FAE4E009C5724 /* SceneDelegate.swift */; };
 		8BA048F42A6FAE4E009C5724 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA048F32A6FAE4E009C5724 /* ViewController.swift */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B28F09C2A70181A001FE481 /* Enumeration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumeration.swift; sourceTree = "<group>"; };
+		8B53D7352A70031F003C8E65 /* EmotionMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionMainViewController.swift; sourceTree = "<group>"; };
+		8B53D7372A70135C003C8E65 /* StatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticViewController.swift; sourceTree = "<group>"; };
 		8BA048EC2A6FAE4E009C5724 /* EmotionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmotionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BA048EF2A6FAE4E009C5724 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BA048F12A6FAE4E009C5724 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +66,9 @@
 				8BA048F12A6FAE4E009C5724 /* SceneDelegate.swift */,
 				8BA048F32A6FAE4E009C5724 /* ViewController.swift */,
 				8BA048F52A6FAE4E009C5724 /* Main.storyboard */,
+				8B28F09C2A70181A001FE481 /* Enumeration.swift */,
+				8B53D7352A70031F003C8E65 /* EmotionMainViewController.swift */,
+				8B53D7372A70135C003C8E65 /* StatisticViewController.swift */,
 				8BA048F82A6FAE4F009C5724 /* Assets.xcassets */,
 				8BA048FA2A6FAE4F009C5724 /* LaunchScreen.storyboard */,
 				8BA048FD2A6FAE4F009C5724 /* Info.plist */,
@@ -139,8 +148,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BA048F42A6FAE4E009C5724 /* ViewController.swift in Sources */,
+				8B53D7362A70031F003C8E65 /* EmotionMainViewController.swift in Sources */,
 				8BA048F02A6FAE4E009C5724 /* AppDelegate.swift in Sources */,
+				8B53D7382A70135C003C8E65 /* StatisticViewController.swift in Sources */,
 				8BA048F22A6FAE4E009C5724 /* SceneDelegate.swift in Sources */,
+				8B28F09D2A70181A001FE481 /* Enumeration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
