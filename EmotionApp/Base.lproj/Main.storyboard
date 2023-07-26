@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--작성하기-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="EmotionMainViewController" customModule="EmotionApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -106,7 +106,7 @@
                             <constraint firstItem="LOK-WU-izT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pDo-Ky-64p"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="STE-mK-07n"/>
+                    <tabBarItem key="tabBarItem" title="작성하기" image="pencil.circle" catalog="system" id="STE-mK-07n"/>
                     <connections>
                         <outlet property="appTitle" destination="DUj-xx-RAP" id="U7q-gm-e77"/>
                         <outletCollection property="recordEmotionButtonCollection" destination="isS-w6-97p" collectionClass="NSMutableArray" id="ZyB-19-nr3"/>
@@ -129,6 +129,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="labelColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="K6T-w5-mSw"/>
@@ -139,7 +140,7 @@
             </objects>
             <point key="canvasLocation" x="113.74045801526717" y="-27.464788732394368"/>
         </scene>
-        <!--Item-->
+        <!--통계보기-->
         <scene sceneID="IUy-Qs-0IW">
             <objects>
                 <viewController id="tnJ-nJ-KCq" customClass="StatisticViewController" customModule="EmotionApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -277,7 +278,7 @@
                             <constraint firstItem="qEI-1D-kFX" firstAttribute="top" secondItem="OQH-D2-3C4" secondAttribute="bottom" constant="50" id="ymi-3y-Wqp"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="hBO-zm-7R7"/>
+                    <tabBarItem key="tabBarItem" title="통계보기" image="chart.bar" catalog="system" id="hBO-zm-7R7"/>
                     <connections>
                         <outlet property="appTitle" destination="OQH-D2-3C4" id="yN9-RY-7lm"/>
                         <outletCollection property="emotionScoreLabelCollection" destination="qEI-1D-kFX" collectionClass="NSMutableArray" id="7wc-WL-Q5L"/>
@@ -298,6 +299,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chart.bar" catalog="system" width="128" height="89"/>
+        <image name="pencil.circle" catalog="system" width="128" height="123"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
