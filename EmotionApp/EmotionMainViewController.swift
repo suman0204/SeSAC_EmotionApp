@@ -32,16 +32,68 @@ class EmotionMainViewController: UIViewController {
         }
         
     }
+    @IBAction func plusOne(_ sender: UIButton) {
+    }
     
     @IBAction func emotionButtonTapped(_ sender: UIButton) {
-        if let emotion = Emotion(rawValue: sender.tag), let count = emotionCounts[emotion] {
+        if let emotion = Emotion(rawValue: sender.tag), let count = emotionCounts[emotion], let emotionCount = Int(UserDefaults.standard.string(forKey: "\(emotion)") ?? "0") {
+            
+            let plusOne = UIAction(title: "+ 1", handler: { _ in
+                UserDefaults.standard.set(emotionCount + 1, forKey: "\(emotion)")
+
+                print("\(emotion)은 \(emotionCount + 1)점입니다")
+
+            })
+
+            let plusFive = UIAction(title: "+ 5", handler: { _ in
+                print("first \(count)")
+
+//                self.emotionCounts[emotion] = count + 5
+//                print("\(emotion)은 \(count + 5)점입니다")
+//                UserDefaults.standard.set(count + 5, forKey: "\(emotion)")
+//                print("second \(count)")
+//                print("userdefaults\(UserDefaults.standard.integer(forKey: "\(emotion)"))")
+                UserDefaults.standard.set(emotionCount + 5, forKey: "\(emotion)")
+
+                print("\(emotion)은 \(emotionCount + 5)점입니다")
+
+
+
+            })
+
+            let plusTen = UIAction(title: "+ 10", handler: { _ in
+//                self.emotionCounts[emotion] = count + 10
+//                print("\(emotion)은 \(count + 10)점입니다")
+//                UserDefaults.standard.set(count + 10, forKey: "\(emotion)")
+                UserDefaults.standard.set(emotionCount + 10, forKey: "\(emotion)")
+
+                print("\(emotion)은 \(emotionCount + 10)점입니다")
+
+            })
+
+            let cancel = UIAction(title: "취소", attributes: .destructive, handler: { _ in print("취소") })
+
+            sender.menu = UIMenu(title: "title입니다",
+                                 image: UIImage(systemName: "heart.fill"),
+                                 identifier: nil,
+                                 options: .displayInline,
+                                 children: [plusOne, plusFive, plusTen, cancel])
+
+            print()
+            
             emotionCounts[emotion] = count + 1
-            print(emotion)
-            print(sender.tag)
-            print("\(emotion)은 \(count + 1)점입니다")
-            UserDefaults.standard.set(count + 1, forKey: "\(emotion)")
+//            print(emotion)
+//            print(sender.tag)
+//
+            UserDefaults.standard.set(emotionCount + 1, forKey: "\(emotion)")
+
+            print("\(emotion)은 \(emotionCount + 1)점입니다")
+
+//            UserDefaults.standard.set(count + 1, forKey: "\(emotion)")
+//            print(UserDefaults.standard.string(forKey: "\(emotion)"))
+//            UserDefaults.standard.set
         }
-        
+
     }
     
     func designAppTitle() {
