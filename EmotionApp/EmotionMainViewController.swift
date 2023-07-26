@@ -9,6 +9,8 @@ import UIKit
 
 class EmotionMainViewController: UIViewController {
     
+//    let statisticVC: StatisticViewController = StatisticViewController()
+    
     let imageName: [String] = ["emoji1", "emoji2", "emoji2", "emoji3", "emoji4", "emoji5"]
     let buttonColor: [UIColor] = [.red, .orange, .yellow, .green, .blue]
     
@@ -22,7 +24,13 @@ class EmotionMainViewController: UIViewController {
         super.viewDidLoad()
         designAppTitle()
         designEmotionButton()
-
+        
+        for index in 0...4 {
+            let emotions = Emotion.allCases
+            let userDefaultScore = UserDefaults.standard.integer(forKey: "\(emotions[index])")
+            emotionCounts[emotions[index]] = userDefaultScore
+        }
+        
     }
     
     @IBAction func emotionButtonTapped(_ sender: UIButton) {
@@ -31,6 +39,7 @@ class EmotionMainViewController: UIViewController {
             print(emotion)
             print(sender.tag)
             print("\(emotion)은 \(count + 1)점입니다")
+            UserDefaults.standard.set(count + 1, forKey: "\(emotion)")
         }
         
     }

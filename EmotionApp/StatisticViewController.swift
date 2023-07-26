@@ -8,7 +8,7 @@
 import UIKit
 
 class StatisticViewController: UIViewController {
-    let emotionVC = EmotionMainViewController()
+    let emotionVC: EmotionMainViewController = EmotionMainViewController()
     
     @IBOutlet var appTitle: UILabel!
     
@@ -21,6 +21,18 @@ class StatisticViewController: UIViewController {
         designAppTitle()
         designEmotionScoreLabel()
         designScoreLabel()
+        print("statistic")
+    }
+    
+    // *** VC 생명주기 ***
+    override func viewWillAppear(_ animated: Bool) {
+        scoreLabelCollection.forEach { UILabel in
+            print(UILabel.tag)
+            if let emotion = Emotion(rawValue: UILabel.tag){
+                let userDefaultScore = UserDefaults.standard.string(forKey: "\(emotion)")
+                UILabel.text = userDefaultScore
+            }
+        }
     }
     
     func designAppTitle() {
